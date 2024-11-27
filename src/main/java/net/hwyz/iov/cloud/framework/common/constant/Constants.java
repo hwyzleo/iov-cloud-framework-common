@@ -12,4 +12,19 @@ public class Constants {
      */
     public static final String[] JSON_WHITELIST_STR = {"org.springframework", "net.hwyz.iov"};
 
+    /**
+     * 成功标记
+     */
+    public static final Integer SUCCESS = 200;
+
+    /**
+     * 失败标记
+     */
+    public static final Integer FAIL = 500;
+
+    /**
+     * 验证码有效期（分钟）
+     */
+    public static final long CAPTCHA_EXPIRATION = 2;
+
 }

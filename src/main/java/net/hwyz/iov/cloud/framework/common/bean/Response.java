@@ -2,6 +2,7 @@ package net.hwyz.iov.cloud.framework.common.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import net.hwyz.iov.cloud.framework.common.constant.Constants;
 
 /**
  * 响应对象
@@ -30,6 +31,9 @@ public class Response<T> {
      */
     private T data;
 
+    /** 失败 */
+    public static final int FAIL = Constants.FAIL;
+
     public Response() {
         this.ts = System.currentTimeMillis();
     }
@@ -43,6 +47,18 @@ public class Response<T> {
         this.message = message;
         this.ts = System.currentTimeMillis();
         this.data = data;
+    }
+
+    public static <T> Response<T> fail(int code, String msg) {
+        return restResult(null, code, msg);
+    }
+
+    private static <T> Response<T> restResult(T data, int code, String msg) {
+        Response<T> apiResult = new Response<>();
+        apiResult.setCode(code);
+        apiResult.setData(data);
+        apiResult.setMessage(msg);
+        return apiResult;
     }
 
 }
