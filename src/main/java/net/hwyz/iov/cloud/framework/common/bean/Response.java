@@ -31,7 +31,14 @@ public class Response<T> {
      */
     private T data;
 
-    /** 失败 */
+    /**
+     * 成功
+     */
+    public static final int SUCCESS = Constants.SUCCESS;
+
+    /**
+     * 失败
+     */
     public static final int FAIL = Constants.FAIL;
 
     public Response() {
@@ -47,6 +54,22 @@ public class Response<T> {
         this.message = message;
         this.ts = System.currentTimeMillis();
         this.data = data;
+    }
+
+    public static <T> Response<T> ok() {
+        return restResult(null, SUCCESS, null);
+    }
+
+    public static <T> Response<T> ok(T data) {
+        return restResult(data, SUCCESS, null);
+    }
+
+    public static <T> Response<T> ok(T data, String msg) {
+        return restResult(data, SUCCESS, msg);
+    }
+
+    public static <T> Response<T> fail(String msg) {
+        return restResult(null, FAIL, msg);
     }
 
     public static <T> Response<T> fail(int code, String msg) {

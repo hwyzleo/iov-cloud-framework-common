@@ -23,6 +23,21 @@ public class Constants {
     public static final Integer FAIL = 500;
 
     /**
+     * www主域
+     */
+    public static final String WWW = "www.";
+
+    /**
+     * http请求
+     */
+    public static final String HTTP = "http://";
+
+    /**
+     * https请求
+     */
+    public static final String HTTPS = "https://";
+
+    /**
      * 验证码有效期（分钟）
      */
     public static final long CAPTCHA_EXPIRATION = 2;
