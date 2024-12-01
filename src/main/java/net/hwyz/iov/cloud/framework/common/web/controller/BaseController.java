@@ -1,13 +1,13 @@
 package net.hwyz.iov.cloud.framework.common.web.controller;
 
 import com.github.pagehelper.PageInfo;
+import lombok.extern.slf4j.Slf4j;
 import net.hwyz.iov.cloud.framework.common.constant.HttpStatus;
 import net.hwyz.iov.cloud.framework.common.util.DateUtil;
 import net.hwyz.iov.cloud.framework.common.util.PageUtil;
 import net.hwyz.iov.cloud.framework.common.web.domain.AjaxResult;
+import net.hwyz.iov.cloud.framework.common.web.domain.BaseRequest;
 import net.hwyz.iov.cloud.framework.common.web.page.TableDataInfo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 
@@ -20,8 +20,8 @@ import java.util.List;
  *
  * @author hwyz_leo
  */
+@Slf4j
 public class BaseController {
-    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 将前台传递过来的日期格式的字符串，自动转化为Date类型
@@ -35,6 +35,42 @@ public class BaseController {
                 setValue(DateUtil.parseDate(text));
             }
         });
+    }
+
+    /**
+     * 获取请求参数中的开始时间
+     *
+     * @param request 请求
+     * @return 开始时间
+     */
+    protected Date getBeginTime(BaseRequest request) {
+        if (request == null || request.getParams() == null || !request.getParams().containsKey("beginTime")) {
+            return null;
+        }
+        try {
+            return DateUtil.parseDate(request.getParams().get("beginTime").toString());
+        } catch (Exception e) {
+            logger.warn("日期转换异常:{}", e.getMessage(), e);
+            return null;
+        }
+    }
+
+    /**
+     * 获取请求参数中的结束时间
+     *
+     * @param request 请求
+     * @return 结束时间
+     */
+    protected Date getEndTime(BaseRequest request) {
+        if (request == null || request.getParams() == null || !request.getParams().containsKey("endTime")) {
+            return null;
+        }
+        try {
+            return DateUtil.parseDate(request.getParams().get("endTime").toString());
+        } catch (Exception e) {
+            logger.warn("日期转换异常:{}", e.getMessage(), e);
+            return null;
+        }
     }
 
     /**
