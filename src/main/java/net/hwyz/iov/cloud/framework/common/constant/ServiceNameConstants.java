@@ -12,6 +12,11 @@ public class ServiceNameConstants {
     public static final String TSP_ACCOUNT = "tsp-account";
 
     /**
+     * TSP-车辆主数据
+     */
+    public static final String TSP_VMD = "tsp-vmd";
+
+    /**
      * MPT-网关
      */
     public static final String MPT_GATEWAY = "mpt-gateway";
