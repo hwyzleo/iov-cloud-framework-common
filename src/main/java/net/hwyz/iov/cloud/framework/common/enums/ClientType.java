@@ -10,6 +10,8 @@ public enum ClientType {
     /** 手机 **/
     MP,
     /** 信息娱乐域控制模块 **/
-    IDCM;
+    IDCM,
+    /** 管理后台 **/
+    MPT;
 
 }
