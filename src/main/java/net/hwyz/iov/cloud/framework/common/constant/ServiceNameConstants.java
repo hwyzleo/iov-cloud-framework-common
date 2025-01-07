@@ -17,6 +17,11 @@ public class ServiceNameConstants {
     public static final String TSP_VMD = "tsp-vmd";
 
     /**
+     * DMS-组织架构服务
+     */
+    public static final String DMS_ORG = "dms-org";
+
+    /**
      * MPT-网关
      */
     public static final String MPT_GATEWAY = "mpt-gateway";

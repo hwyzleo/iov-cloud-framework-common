@@ -114,6 +114,19 @@ public class BaseController {
     }
 
     /**
+     * 响应请求分页数据
+     */
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    protected TableDataInfo getDataTable(List<?> list, long total) {
+        TableDataInfo rspData = new TableDataInfo();
+        rspData.setCode(HttpStatus.SUCCESS);
+        rspData.setRows(list);
+        rspData.setMsg("查询成功");
+        rspData.setTotal(total);
+        return rspData;
+    }
+
+    /**
      * 返回成功
      */
     public AjaxResult success() {
