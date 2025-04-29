@@ -19,7 +19,9 @@ public enum EcuType {
     /** 蓝牙模块 **/
     BTM,
     /** 信息娱乐模块 **/
-    IDCM;
+    IDCM,
+    /** 智驾模块 **/
+    ADCM;
 
     public static EcuType valOf(String val) {
         return Arrays.stream(EcuType.values())
