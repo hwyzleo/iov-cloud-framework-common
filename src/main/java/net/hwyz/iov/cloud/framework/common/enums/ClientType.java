@@ -11,6 +11,8 @@ public enum ClientType {
     MP,
     /** 信息娱乐域控制模块 **/
     IDCM,
+    /** 智驾域控制模块 **/
+    ADCM,
     /** 车联终端模块 **/
     TBOX,
     /** 中央计算平台 **/
