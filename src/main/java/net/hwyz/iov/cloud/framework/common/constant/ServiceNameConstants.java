@@ -22,6 +22,11 @@ public class ServiceNameConstants {
     public static final String TSP_SEC = "tsp-sec";
 
     /**
+     * TSP-车联终端
+     */
+    public static final String TSP_TBOX = "tsp-tbox";
+
+    /**
      * TSP-车辆主数据
      */
     public static final String TSP_VMD = "tsp-vmd";
