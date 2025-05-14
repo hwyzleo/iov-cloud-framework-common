@@ -12,6 +12,11 @@ public class ServiceNameConstants {
     public static final String TSP_ACCOUNT = "tsp-account";
 
     /**
+     * TSP-中央计算平台
+     */
+    public static final String TSP_CCP = "tsp-ccp";
+
+    /**
      * TSP-通讯运营商
      */
     public static final String TSP_MNO = "tsp-mno";
