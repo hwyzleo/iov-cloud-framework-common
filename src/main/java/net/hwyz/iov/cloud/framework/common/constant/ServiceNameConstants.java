@@ -6,6 +6,27 @@ package net.hwyz.iov.cloud.framework.common.constant;
  * @author hwyz_leo
  */
 public class ServiceNameConstants {
+
+    /**
+     * DMS-组织架构服务
+     */
+    public static final String DMS_ORG = "dms-org";
+
+    /**
+     * MPT-网关
+     */
+    public static final String MPT_GATEWAY = "mpt-gateway";
+
+    /**
+     * MPT-系统
+     */
+    public static final String MPT_SYSTEM = "mpt-system";
+
+    /**
+     * OTA-在线固件升级
+     */
+    public static final String OTA_FOTA = "ota-fota";
+
     /**
      * TSP-账号
      */
@@ -45,20 +66,5 @@ public class ServiceNameConstants {
      * TSP-车辆主数据
      */
     public static final String TSP_VMD = "tsp-vmd";
-
-    /**
-     * DMS-组织架构服务
-     */
-    public static final String DMS_ORG = "dms-org";
-
-    /**
-     * MPT-网关
-     */
-    public static final String MPT_GATEWAY = "mpt-gateway";
-
-    /**
-     * MPT-系统
-     */
-    public static final String MPT_SYSTEM = "mpt-system";
 
 }
