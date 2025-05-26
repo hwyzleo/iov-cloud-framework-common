@@ -14,10 +14,12 @@ public enum CustomHeaders {
     CLIENT_ID("clientId"),
     /** 客户端类型 **/
     CLIENT_TYPE("clientType"),
+    /** 客户端账号 **/
+    CLIENT_ACCOUNT("clientAccount"),
     /** 令牌 **/
     TOKEN("token"),
-    /** 客户端账号 **/
-    CLIENT_ACCOUNT("clientAccount");
+    /** 车架号 **/
+    VIN("vin");
 
     public final String value;
 
