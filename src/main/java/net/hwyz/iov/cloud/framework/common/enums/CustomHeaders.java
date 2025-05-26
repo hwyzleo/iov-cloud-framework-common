@@ -12,6 +12,8 @@ public enum CustomHeaders {
 
     /** 客户端ID **/
     CLIENT_ID("clientId"),
+    /** 客户端类型 **/
+    CLIENT_TYPE("clientType"),
     /** 令牌 **/
     TOKEN("token"),
     /** 客户端账号 **/
