@@ -28,6 +28,11 @@ public class ServiceNameConstants {
     public static final String OTA_FOTA = "ota-fota";
 
     /**
+     * OTD-仓储管理系统
+     */
+    public static final String OTD_WMS = "otd-wms";
+
+    /**
      * TSP-账号
      */
     public static final String TSP_ACCOUNT = "tsp-account";
