@@ -58,6 +58,11 @@ public class ServiceNameConstants {
     public static final String TSP_MNO = "tsp-mno";
 
     /**
+     * TSP-远程服务与管理系统
+     */
+    public static final String TSP_RSMS = "tsp-rsms";
+
+    /**
      * TSP-安全
      */
     public static final String TSP_SEC = "tsp-sec";
