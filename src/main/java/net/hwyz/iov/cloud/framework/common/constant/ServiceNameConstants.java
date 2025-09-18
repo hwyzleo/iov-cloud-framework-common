@@ -23,6 +23,11 @@ public class ServiceNameConstants {
     public static final String MPT_SYSTEM = "mpt-system";
 
     /**
+     * OTA-基线
+     */
+    public static final String OTA_BASELINE = "ota-baseline";
+
+    /**
      * OTA-在线固件升级
      */
     public static final String OTA_FOTA = "ota-fota";
