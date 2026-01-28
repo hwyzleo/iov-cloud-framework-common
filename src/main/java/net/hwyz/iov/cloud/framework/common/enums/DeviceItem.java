@@ -5,12 +5,12 @@ import lombok.AllArgsConstructor;
 import java.util.Arrays;
 
 /**
- * 设备类型枚举类
+ * 设备项枚举类
  *
  * @author hwyz_leo
  */
 @AllArgsConstructor
-public enum DeviceType {
+public enum DeviceItem {
 
     ACU("安全气囊控制单元", "Airbag Control Unit"),
     ADCM("自动驾驶域控模块", "Autopilot Domain Control Module"),
@@ -45,9 +45,9 @@ public enum DeviceType {
     public final String label;
     public final String labelEn;
 
-    public static DeviceType valOf(String val) {
-        return Arrays.stream(DeviceType.values())
-                .filter(deviceType -> deviceType.name().equals(val))
+    public static DeviceItem valOf(String val) {
+        return Arrays.stream(DeviceItem.values())
+                .filter(deviceItem -> deviceItem.name().equals(val))
                 .findFirst()
                 .orElse(null);
     }
