@@ -28,6 +28,11 @@ public class ServiceNameConstants {
     public static final String OTA_BASELINE = "ota-baseline";
 
     /**
+     * OTA-车辆零件
+     */
+    public static final String OTA_POTA = "ota-pota";
+
+    /**
      * OTA-在线固件升级
      */
     public static final String OTA_FOTA = "ota-fota";
