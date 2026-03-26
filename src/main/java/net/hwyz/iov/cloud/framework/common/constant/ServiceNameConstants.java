@@ -53,6 +53,11 @@ public class ServiceNameConstants {
     public static final String TSP_CCP = "tsp-ccp";
 
     /**
+     * TSP-字典
+     */
+    public static final String TSP_DICTIONARY = "tsp-dictionary";
+
+    /**
      * TSP-信息娱乐模块
      */
     public static final String TSP_IDCM = "tsp-idcm";
