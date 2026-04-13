@@ -70,6 +70,13 @@ public class ApiResponse<T> {
     }
 
     /**
+     * 失败响应（使用错误码）
+     */
+    public static <T> ApiResponse<T> fail(String message) {
+        return fail(CommonErrorCode.INTERNAL_ERROR, message);
+    }
+
+    /**
      * 失败响应（使用错误码 + 自定义消息）
      */
     public static <T> ApiResponse<T> fail(ErrorCode errorCode, String message) {
