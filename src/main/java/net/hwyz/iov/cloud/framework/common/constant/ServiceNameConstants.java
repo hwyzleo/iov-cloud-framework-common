@@ -13,16 +13,6 @@ public class ServiceNameConstants {
     public static final String DMS_ORG = "dms-org";
 
     /**
-     * MPT-网关
-     */
-    public static final String MPT_GATEWAY = "mpt-gateway";
-
-    /**
-     * MPT-系统
-     */
-    public static final String MPT_SYSTEM = "mpt-system";
-
-    /**
      * OTA-基线
      */
     public static final String OTA_BASELINE = "ota-baseline";
@@ -91,5 +81,15 @@ public class ServiceNameConstants {
      * TSP-车辆主数据
      */
     public static final String TSP_VMD = "tsp-vmd";
+
+    /**
+     * 企业数字底座-管理门户网关
+     */
+    public static final String MPT_GATEWAY = "edd-mpgw";
+
+    /**
+     * 企业数字底座-后台管理门户
+     */
+    public static final String EDD_MPT = "edd-mpt";
 
 }
