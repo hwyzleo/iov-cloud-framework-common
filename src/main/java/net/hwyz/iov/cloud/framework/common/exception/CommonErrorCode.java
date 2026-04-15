@@ -10,7 +10,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CommonErrorCode implements ErrorCode {
 
-    SUCCESS("200", "成功"),
+    SUCCESS("000000", "成功"),
     INVALID_PARAM("100001", "参数校验失败"),
     INTERNAL_ERROR("100002", "系统内部错误");
 
