@@ -92,4 +92,9 @@ public class ServiceNameConstants {
      */
     public static final String EDD_MPT = "edd-mpt";
 
+    /**
+     * 企业数字底座-服务网关
+     */
+    public static final String EDD_SGW = "edd-sgw";
+
 }
