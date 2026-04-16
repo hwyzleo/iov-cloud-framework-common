@@ -42,6 +42,11 @@ public class SecurityConstants {
     public static final String AUTHORIZATION_HEADER = "Authorization";
 
     /**
+     * 授权信息前缀
+     */
+    public static final String BEARER_PREFIX = "Bearer ";
+
+    /**
      * 请求来源
      */
     public static final String FROM_SOURCE = "from-source";
