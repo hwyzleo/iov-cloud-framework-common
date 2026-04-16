@@ -1,23 +1,23 @@
 package net.hwyz.iov.cloud.framework.common.constant;
 
 /**
- * 管理后台权限相关通用常量
+ * 安全相关通用常量
  *
  * @author hwyz_leo
  */
-public class MptSecurityConstants {
+public class SecurityConstants {
     /**
-     * 用户ID字段
+     * 用户ID
      */
-    public static final String DETAILS_USER_ID = "user_id";
+    public static final String USER_ID = "user_id";
 
     /**
-     * 用户名字段
+     * 用户名
      */
-    public static final String DETAILS_USERNAME = "username";
+    public static final String USERNAME = "username";
 
     /**
-     * 授权信息字段
+     * 授权信息
      */
     public static final String AUTHORIZATION_HEADER = "Authorization";
 

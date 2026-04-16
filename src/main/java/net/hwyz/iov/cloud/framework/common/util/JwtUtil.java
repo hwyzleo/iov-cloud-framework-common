@@ -3,7 +3,7 @@ package net.hwyz.iov.cloud.framework.common.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import net.hwyz.iov.cloud.framework.common.constant.MptSecurityConstants;
+import net.hwyz.iov.cloud.framework.common.constant.SecurityConstants;
 import net.hwyz.iov.cloud.framework.common.constant.TokenConstants;
 
 import javax.crypto.SecretKey;
@@ -49,7 +49,7 @@ public class JwtUtil {
      */
     public static String getUserKey(String token) {
         Claims claims = parseToken(token);
-        return getValue(claims, MptSecurityConstants.USER_KEY);
+        return getValue(claims, SecurityConstants.USER_KEY);
     }
 
     /**
@@ -59,7 +59,7 @@ public class JwtUtil {
      * @return 用户ID
      */
     public static String getUserKey(Claims claims) {
-        return getValue(claims, MptSecurityConstants.USER_KEY);
+        return getValue(claims, SecurityConstants.USER_KEY);
     }
 
     /**
@@ -70,7 +70,7 @@ public class JwtUtil {
      */
     public static String getUserId(String token) {
         Claims claims = parseToken(token);
-        return getValue(claims, MptSecurityConstants.DETAILS_USER_ID);
+        return getValue(claims, SecurityConstants.USER_ID);
     }
 
     /**
@@ -80,7 +80,7 @@ public class JwtUtil {
      * @return 用户ID
      */
     public static String getUserId(Claims claims) {
-        return getValue(claims, MptSecurityConstants.DETAILS_USER_ID);
+        return getValue(claims, SecurityConstants.USER_ID);
     }
 
     /**
@@ -91,7 +91,7 @@ public class JwtUtil {
      */
     public static String getUserName(String token) {
         Claims claims = parseToken(token);
-        return getValue(claims, MptSecurityConstants.DETAILS_USERNAME);
+        return getValue(claims, SecurityConstants.USERNAME);
     }
 
     /**
@@ -101,7 +101,7 @@ public class JwtUtil {
      * @return 用户名
      */
     public static String getUserName(Claims claims) {
-        return getValue(claims, MptSecurityConstants.DETAILS_USERNAME);
+        return getValue(claims, SecurityConstants.USERNAME);
     }
 
     /**
