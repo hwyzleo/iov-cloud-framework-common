@@ -17,6 +17,26 @@ public class SecurityConstants {
     public static final String USERNAME = "username";
 
     /**
+     * 用户标识
+     */
+    public static final String USER_KEY = "user_key";
+
+    /**
+     * 客户端ID
+     */
+    public static final String CLIENT_ID = "client_id";
+
+    /**
+     * 设备ID
+     */
+    public static final String DEVICE_ID = "device_id";
+
+    /**
+     * 会话ID
+     */
+    public static final String SESSION_ID = "session_id";
+
+    /**
      * 授权信息
      */
     public static final String AUTHORIZATION_HEADER = "Authorization";
@@ -27,14 +47,14 @@ public class SecurityConstants {
     public static final String FROM_SOURCE = "from-source";
 
     /**
+     * 范围
+     */
+    public static final String SCOPE = "scope";
+
+    /**
      * 内部请求
      */
     public static final String INNER = "inner";
-
-    /**
-     * 用户标识
-     */
-    public static final String USER_KEY = "user_key";
 
     /**
      * 登录用户
