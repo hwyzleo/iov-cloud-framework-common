@@ -148,7 +148,7 @@ public class ReflectUtils {
                         args[i] = Convert.toFloat(args[i]);
                     } else if (cs[i] == Date.class) {
                         if (args[i] instanceof String) {
-                            args[i] = DateUtil.parseDate(args[i].toString());
+                            args[i] = DateTimeUtil.parseDate(args[i].toString());
                         } else {
                             args[i] = new Date((Long) args[i]);
                         }
