@@ -42,7 +42,6 @@ public class ApiResponse<T> {
     /**
      * 链路追踪 ID
      */
-    @JsonProperty("trace_id")
     private String traceId;
 
     /**
