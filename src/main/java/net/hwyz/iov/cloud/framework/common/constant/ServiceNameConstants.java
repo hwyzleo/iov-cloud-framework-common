@@ -78,9 +78,9 @@ public class ServiceNameConstants {
     public static final String TSP_TBOX = "tsp-tbox";
 
     /**
-     * TSP-车辆主数据
+     * 安全与合规-用户身份及访问管理系统
      */
-    public static final String TSP_VMD = "tsp-vmd";
+    public static final String SEC_CIAM = "sec-ciam";
 
     /**
      * 企业数字底座-管理门户网关
@@ -96,5 +96,10 @@ public class ServiceNameConstants {
      * 企业数字底座-服务网关
      */
     public static final String EDD_SGW = "edd-sgw";
+
+    /**
+     * 企业数字底座-车辆主数据
+     */
+    public static final String EDD_VMD = "edd-vmd";
 
 }
