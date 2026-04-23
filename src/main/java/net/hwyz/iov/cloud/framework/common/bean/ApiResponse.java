@@ -1,6 +1,7 @@
 package net.hwyz.iov.cloud.framework.common.bean;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,6 +42,7 @@ public class ApiResponse<T> {
     /**
      * 链路追踪 ID
      */
+    @JsonProperty("trace_id")
     private String traceId;
 
     /**
