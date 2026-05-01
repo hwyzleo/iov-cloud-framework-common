@@ -23,6 +23,11 @@ public abstract class BaseDo<ID> {
     private DoState state;
 
     /**
+     * 无参构造器，解决跨 jar 的 Lombok @SuperBuilder 兼容性问题
+     */
+    protected BaseDo() {
+    }
+    /**
      * 状态初始化
      */
     protected void stateInit() {
