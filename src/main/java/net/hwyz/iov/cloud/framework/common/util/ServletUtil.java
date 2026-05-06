@@ -144,6 +144,20 @@ public class ServletUtil {
         }
     }
 
+    /**
+     * 获取header
+     *
+     * @param name header名称
+     * @return header值
+     */
+    public static String getHeader(String name) {
+        HttpServletRequest request = getRequest();
+        if (request == null) {
+            return StrUtil.EMPTY;
+        }
+        return getHeader(getRequest(), name);
+    }
+
     public static String getHeader(HttpServletRequest request, String name) {
         String value = request.getHeader(name);
         if (StrUtil.isEmpty(value)) {

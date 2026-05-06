@@ -3,6 +3,7 @@ package net.hwyz.iov.cloud.framework.common.util;
 import cn.hutool.core.util.StrUtil;
 import net.hwyz.iov.cloud.framework.common.bean.ClientAccount;
 import net.hwyz.iov.cloud.framework.common.bean.MptAccount;
+import net.hwyz.iov.cloud.framework.common.constant.SecurityConstants;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -23,6 +24,17 @@ public class ParamHelper {
             return null;
         }
         return StrUtil.emptyIfNull(clientAccount.getClientId()) + ":" + StrUtil.emptyIfNull(clientAccount.getAccountId());
+    }
+
+    /**
+     * 获取客户端账号信息
+     *
+     * @return 获取客户端账号信息
+     */
+    public static String getClientAccountInfo() {
+        String deviceId = ServletUtil.getHeader(SecurityConstants.DEVICE_ID);
+        String userId = ServletUtil.getHeader(SecurityConstants.USER_ID);
+        return StrUtil.emptyIfNull(deviceId) + ":" + StrUtil.emptyIfNull(userId);
     }
 
     /**
