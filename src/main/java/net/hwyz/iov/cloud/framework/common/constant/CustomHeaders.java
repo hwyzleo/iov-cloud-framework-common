@@ -50,4 +50,44 @@ public class CustomHeaders {
      * 车架号
      */
     public static final String VIN = "X-Vin";
+
+    /**
+     * 用户名
+     */
+    public static final String USERNAME = "X-Username";
+
+    /**
+     * 用户ID
+     */
+    public static final String USER_ID = "X-User-Id";
+
+    /**
+     * 用户标识
+     */
+    public static final String USER_KEY = "X-User-Key";
+
+    /**
+     * 会话ID
+     */
+    public static final String SESSION_ID = "X-Session-Id";
+
+    /**
+     * 范围
+     */
+    public static final String SCOPE = "X-Scope";
+
+    /**
+     * 请求来源
+     */
+    public static final String FROM_SOURCE = "from-source";
+
+    /**
+     * 授权信息
+     */
+    public static final String AUTHORIZATION_HEADER = "Authorization";
+
+    /**
+     * 授权信息前缀
+     */
+    public static final String BEARER_PREFIX = "Bearer ";
 }

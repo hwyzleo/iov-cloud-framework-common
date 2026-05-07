@@ -22,6 +22,11 @@ public class SecurityConstants {
     public static final String USER_KEY = "user_key";
 
     /**
+     * 会话ID
+     */
+    public static final String SESSION_ID = "session_id";
+
+    /**
      * 客户端ID
      */
     public static final String CLIENT_ID = "client_id";
@@ -32,9 +37,24 @@ public class SecurityConstants {
     public static final String DEVICE_ID = "device_id";
 
     /**
-     * 会话ID
+     * 客户端类型
      */
-    public static final String SESSION_ID = "session_id";
+    public static final String CLIENT_TYPE = "client_type";
+
+    /**
+     * 平台
+     */
+    public static final String PLATFORM = "platform";
+
+    /**
+     * 操作系统版本
+     */
+    public static final String OS_VERSION = "os_version";
+
+    /**
+     * APP版本
+     */
+    public static final String APP_VERSION = "app_version";
 
     /**
      * 授权信息
@@ -55,6 +75,11 @@ public class SecurityConstants {
      * 范围
      */
     public static final String SCOPE = "scope";
+
+    /**
+     * 类型
+     */
+    public static final String TYPE = "type";
 
     /**
      * 内部请求
