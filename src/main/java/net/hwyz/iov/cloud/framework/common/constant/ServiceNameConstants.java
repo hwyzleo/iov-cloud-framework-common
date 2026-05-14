@@ -8,11 +8,6 @@ package net.hwyz.iov.cloud.framework.common.constant;
 public class ServiceNameConstants {
 
     /**
-     * DMS-组织架构服务
-     */
-    public static final String DMS_ORG = "dms-org";
-
-    /**
      * OTA-基线
      */
     public static final String OTA_BASELINE = "ota-baseline";
@@ -96,6 +91,11 @@ public class ServiceNameConstants {
      * 企业数字底座-车辆主数据
      */
     public static final String EDD_VMD = "edd-vmd";
+
+    /**
+     * 企业数字底座-组织架构服务
+     */
+    public static final String EDD_ORG = "edd-org";
 
     /**
      * 企业数字底座-数据字典
