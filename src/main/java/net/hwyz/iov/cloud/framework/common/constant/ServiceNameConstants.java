@@ -48,9 +48,9 @@ public class ServiceNameConstants {
     public static final String TSP_IDK = "tsp-idk";
 
     /**
-     * TSP-通讯运营商
+     * 车联与运营-TSP
      */
-    public static final String TSP_MNO = "tsp-mno";
+    public static final String IOV_TSP = "iov-tsp";
 
     /**
      * TSP-远程服务与管理系统
