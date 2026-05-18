@@ -63,11 +63,6 @@ public class ServiceNameConstants {
     public static final String TSP_SEC = "tsp-sec";
 
     /**
-     * TSP-车联终端
-     */
-    public static final String TSP_TBOX = "tsp-tbox";
-
-    /**
      * 安全与合规-用户身份及访问管理系统
      */
     public static final String SEC_CIAM = "sec-ciam";
