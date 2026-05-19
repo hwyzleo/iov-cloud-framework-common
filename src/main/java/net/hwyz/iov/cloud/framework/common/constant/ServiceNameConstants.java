@@ -38,14 +38,14 @@ public class ServiceNameConstants {
     public static final String TSP_IDCM = "tsp-idcm";
 
     /**
-     * TSP-智能数字钥匙
-     */
-    public static final String TSP_IDK = "tsp-idk";
-
-    /**
-     * 车联与运营-TSP
+     * 车联与运营-车联服务
      */
     public static final String IOV_TSP = "iov-tsp";
+
+    /**
+     * 车联与运营-智能数字钥匙
+     */
+    public static final String IOV_IDK = "iov-idk";
 
     /**
      * TSP-远程服务与管理系统
