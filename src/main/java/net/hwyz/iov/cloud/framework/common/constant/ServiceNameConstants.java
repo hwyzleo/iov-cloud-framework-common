@@ -33,11 +33,6 @@ public class ServiceNameConstants {
     public static final String TSP_ACCOUNT = "tsp-account";
 
     /**
-     * TSP-信息娱乐模块
-     */
-    public static final String TSP_IDCM = "tsp-idcm";
-
-    /**
      * 车联与运营-车联服务
      */
     public static final String IOV_TSP = "iov-tsp";
