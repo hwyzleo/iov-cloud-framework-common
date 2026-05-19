@@ -13,11 +13,6 @@ public class ServiceNameConstants {
     public static final String OTA_BASELINE = "ota-baseline";
 
     /**
-     * OTA-车辆零件
-     */
-    public static final String OTA_POTA = "ota-pota";
-
-    /**
      * OTA-在线固件升级
      */
     public static final String OTA_FOTA = "ota-fota";
@@ -41,6 +36,11 @@ public class ServiceNameConstants {
      * 车联与运营-智能数字钥匙
      */
     public static final String IOV_IDK = "iov-idk";
+
+    /**
+     * 车联与运营-在线升级系统
+     */
+    public static final String IOV_OTA = "iov-ota";
 
     /**
      * TSP-远程服务与管理系统
