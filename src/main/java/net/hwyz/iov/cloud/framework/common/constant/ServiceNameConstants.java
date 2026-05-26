@@ -87,4 +87,9 @@ public class ServiceNameConstants {
      */
     public static final String EDD_DICTIONARY = "edd-dictionary";
 
+    /**
+     * 企业数字底座-主数据管理
+     */
+    public static final String EDD_MDM = "edd-mdm";
+
 }
