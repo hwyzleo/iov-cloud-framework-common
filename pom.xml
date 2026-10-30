@@ -71,4 +71,54 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- Parent 全局 surefire skip=true（CI 默认），本模块覆盖为 false 使测试可执行（同 framework-web/mysql 先例，FW-COMMON-DSN-CR-001 TC-07） -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+                <executions>
+                    <!-- 双 JVM 时区一致性（FW-COMMON-DSN-CR-001 TC-01/TC-07）：
+                         UTC 与 Asia/Shanghai 独立 fork 进程重跑 TimezoneInvarianceTest，
+                         避免进程内 TimeZone.setDefault 全局时区污染；断言本身与 JVM 时区无关。 -->
+                    <execution>
+                        <id>tz-utc</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <systemPropertyVariables>
+                                <user.timezone>UTC</user.timezone>
+                                <tz.expect>UTC</tz.expect>
+                            </systemPropertyVariables>
+                            <includes>
+                                <include>**/TimezoneInvarianceTest.java</include>
+                            </includes>
+                            <reportsDirectory>${project.build.directory}/surefire-reports-tz-utc</reportsDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>tz-shanghai</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <systemPropertyVariables>
+                                <user.timezone>Asia/Shanghai</user.timezone>
+                                <tz.expect>Asia/Shanghai</tz.expect>
+                            </systemPropertyVariables>
+                            <includes>
+                                <include>**/TimezoneInvarianceTest.java</include>
+                            </includes>
+                            <reportsDirectory>${project.build.directory}/surefire-reports-tz-shanghai</reportsDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
