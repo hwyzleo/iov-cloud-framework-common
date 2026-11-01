@@ -58,6 +58,11 @@ public class ServiceNameConstants {
     public static final String SEC_CIAM = "sec-ciam";
 
     /**
+     * 安全与合规-车辆身份及访问管理系统
+     */
+    public static final String SEC_VIAM = "sec-viam";
+
+    /**
      * 企业数字底座-管理门户网关
      */
     public static final String MPT_GATEWAY = "edd-mpgw";
