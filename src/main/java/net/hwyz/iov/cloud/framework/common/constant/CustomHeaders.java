@@ -82,6 +82,11 @@ public class CustomHeaders {
     public static final String FROM_SOURCE = "from-source";
 
     /**
+     * 调用方服务名（Feign 调用时由调用方自动写入，值为调用方 spring.application.name）
+     */
+    public static final String CALLER_SERVICE_NAME = "X-Caller-Service";
+
+    /**
      * 授权信息
      */
     public static final String AUTHORIZATION_HEADER = "Authorization";
