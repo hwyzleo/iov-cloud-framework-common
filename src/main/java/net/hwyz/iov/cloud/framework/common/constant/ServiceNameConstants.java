@@ -97,4 +97,9 @@ public class ServiceNameConstants {
      */
     public static final String EDD_MDM = "edd-mdm";
 
+    /**
+     * 企业数字底座-对象存储
+     */
+    public static final String EDD_OSS = "edd-oss";
+
 }
