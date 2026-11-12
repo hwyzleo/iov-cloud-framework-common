@@ -90,7 +90,7 @@ public class ServiceNameConstants {
     /**
      * 企业数字底座-数据字典
      */
-    public static final String EDD_DICTIONARY = "edd-dictionary";
+    public static final String EDD_DICT = "edd-dict";
 
     /**
      * 企业数字底座-主数据管理
