@@ -2,6 +2,9 @@ package net.hwyz.iov.cloud.framework.common.enums;
 
 /**
  * 客户端类型枚举类
+ * <p>
+ * IOV-TSP-DSN-CR-017：车辆侧车机（IVI）客户端类型由历史 {@code IDCM} 改为 {@code IVI}，
+ * 与 CIAM 令牌 {@code client_type} 声明、SGW 车辆类型白名单保持一致。
  *
  * @author hwyz_leo
  */
@@ -9,8 +12,8 @@ public enum ClientType {
 
     /** 手机 **/
     MOBILE,
-    /** 信息娱乐域控制模块 **/
-    IDCM,
+    /** 车载信息娱乐系统（车机） **/
+    IVI,
     /** 智驾域控制模块 **/
     ADCM,
     /** 车联终端模块 **/
