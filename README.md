@@ -40,3 +40,31 @@
 - `parseDate(...)`（继承）对带时分秒的字符串会**静默截断到日期**（如 `2026-10-28 12:00:00`
   → `2026-10-28 00:00:00`）；严格解析请使用 `ExplicitTimeUtil.parseLocalDateIso`。
 - 既有调用方（ciam/eiam/FW-WEB 等）本批**未迁移**，迁移由各服务配对变更分批批准执行。
+
+## 异常与错误码契约（FW-COMMON-DSN-CR-003）
+
+业务异常的**唯一**契约是 `BusinessException` + `ErrorCode`，由 framework-web 的
+`GlobalExceptionHandler` 统一转换为 `ApiResponse`；framework-common 只提供类型，不做 Web 映射。
+
+### 类型
+
+| 类型 | 用途 |
+|---|---|
+| `ErrorCode` | 错误码契约（`getCode()` / `getMessage()`），由模块错误码枚举实现 |
+| `BusinessException` | 业务异常基类，持有 `ErrorCode`，可选 `detail`（会作为 message 外显） |
+| `HttpStatusAware` | 错误码可选能力：声明机器面（Feign 契约端点）业务错误的 HTTP 状态，默认 422 |
+| `CommonErrorCode` | 平台级错误码：`000000` 成功、`100001` 参数校验失败、`100002` 系统内部错误、`100003` 方法不支持、`100004` 资源不存在 |
+
+### 规范
+
+1. 模块错误码使用模块命名空间（如 VIAM `702xxx`、VMD `806xxx`），并配套注册表做格式/唯一性
+   校验（fail-fast）；旧码退役不复用，映射在单一分类层维护。
+2. 服务自定义异常必须形如 `XxxBaseException extends BusinessException(ErrorCode[, detail])`；
+   参考 VMD `VmdBaseException`、VSO `VsoBaseException`、MDM `MdmBaseException`。
+3. 机器面错误状态由错误码声明（`HttpStatusAware`），不由异常类或 advice 各自决定。
+
+### 历史类型（已弃用）
+
+`ServiceException`（仅字符串消息、`Integer code`）与 `BaseException`（`int code`）已标注
+`@Deprecated`：它们无法携带稳定错误码，会被全局处理器当作系统异常（HTTP 500 + `100002`），
+调用方无法按码分支。新代码禁止使用；存量调用点（EIAM、edd-mpt 等）按各自 CR 迁移。

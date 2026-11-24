@@ -5,10 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 基础异常
+ * 基础异常（历史形态：int 状态码，非错误码枚举）。
  *
  * @author hwyz_leo
+ * @deprecated 统一异常规范改以 {@link BusinessException} + {@link ErrorCode} 为唯一业务异常契约：
+ * int 状态码无法对外登记、无法映射 HTTP 面、与 702xxx/806xxx 等模块码段不兼容。
+ * 新代码禁止使用；存量调用点须迁移到 {@code XxxBaseException extends BusinessException}。
  */
+@Deprecated
 @Getter
 @Setter
 @JsonIgnoreProperties({"stackTrace", "localizedMessage", "suppressed", "cause"})
